@@ -1,0 +1,16 @@
+{
+  "name": "Xnote",
+  "productName": "Xnote",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Benedict Xavier",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "28.2.1"
+  }
+}

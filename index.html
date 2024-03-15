@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./styles.css" rel="stylesheet">
+  <title>Textify 1.0</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="flex" id="controls">
+      <select id="font-name">
+          <option>Arial</option>
+          <option>Lucida Sans</option>
+          <option>Lucida Sans Regular</option>
+          <option>Lucida Grande</option>
+          <option>Lucida Sans Unicode</option>
+          <option>Geneva</option>
+          <option>Verdana</option>
+          <option>sans-serif</option>
+          <option>Georgia</option>
+          <option>Times New Roman</option>
+          <option>Times</option>
+          <option>serif</option>
+          <option>Helvetica</option>
+          <option>Tahoma</option>
+          <option>Impact</option>
+          <option>Haettenschweiler</option>
+          <option>Arial Narrow Bold</option>
+          <option>Trebuchet MS</option>
+          <option>Segoe UI</option>
+          <option>Cambria</option>
+          <option>monospace</option>
+          <option>cursive</option>
+          <option>Courier New</option>
+          <option>Courier</option>
+          <option>monospace</option>
+          <option>fantasy</option>
+        </select>
+
+      <fieldset id="font-style" class="flex">
+        <legend>Font Style</legend>
+        <button class="btn-font-style" id="btn-bold">
+            B
+          </button>
+        <button class="btn-font-style" id="btn-italic">
+            I
+          </button>
+        <button class="btn-font-style" id="btn-underline">
+            U
+          </button>
+      </fieldset>
+      <!--alignment-->
+      <fieldset class="alignment flex">
+        <legend>Alignment</legend>
+        <div id="left" class="flex-align">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="center" class="flex-align">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="justified" class="flex-align">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="right" class="flex-align">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </fieldset>
+      <!--color-->
+      <div class="color-box flex">
+        <div></div>
+        <input type="text" placeholder="color" id="color">
+        <input type="text" readonly id="contrast-checker" value="contrast: 15">
+      </div>
+
+      <div class="other">
+        <label>
+          Font Size: <input type="number" class="value-box" id="font-size" value="12">
+        </label>
+        <label>
+          Word Spacing: <input step="0.1" type="number" class="value-box" id="word-spacing" value="2">
+        </label>
+        <label>
+          Letter Spacing: <input step="0.1" type="number" class="value-box" id="letter-spacing" value="1.2">
+        </label>
+        <label>
+          Line Height: <input step="0.1" type="number" class="value-box" id="line-height" value="1.5">
+        </label>
+      </div>
+    </div>
+    <div id="text" contenteditable="true" autocapitalize="on" aria-multiline="true"></div>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
